@@ -1,0 +1,29 @@
+@{
+    var totalmessage = "";
+    if (IsPost)
+    {
+        var num1 = request["text1"];
+        var num2 = request["text2"];
+        var total = num1.asInt() + num2.asInt();
+        totalmessage = "total = " + total;
+    }
+}
+<DOCTYPE Html>
+    <Html>
+
+    <body style="background-color : lightorange; font-family: verdena, Areal: ">
+        <form action="" method="post">
+            <p>
+                <lable for="text1"> First Number: </lable><br>
+                <input type="text" name="text1" placeholder="enter first number">
+            </p>
+            <p>
+                <lable for="text2"> second Number: </lable><br>
+                <input type="text" name="text2" placeholder="enter second number">
+            </p><br>
+            <p> <input type="submit" value="Add"></p>
+        </form>
+        <p>@totalmessage</p>
+    </body>
+
+    </Html>
